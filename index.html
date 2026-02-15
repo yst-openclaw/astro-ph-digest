@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>astro-ph Daily Digest</title>
+    <style>
+        :root {
+            --bg: #0d1117;
+            --bg-secondary: #161b22;
+            --text: #c9d1d9;
+            --text-muted: #8b949e;
+            --accent: #58a6ff;
+            --border: #30363d;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+        
+        header { background: var(--bg-secondary); border-bottom: 1px solid var(--border); padding: 30px 0; margin-bottom: 40px; }
+        header h1 { font-size: 2rem; margin-bottom: 5px; }
+        header .subtitle { color: var(--text-muted); margin-bottom: 15px; }
+        header nav a { color: var(--accent); text-decoration: none; margin-right: 20px; }
+        
+        h2 { font-size: 1.6rem; margin-bottom: 15px; }
+        .paper-count { color: var(--text-muted); margin-bottom: 25px; }
+        
+        .themes { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 6px; padding: 20px; margin-bottom: 30px; }
+        .themes h3 { font-size: 1.1rem; margin-bottom: 12px; color: var(--accent); }
+        .themes ul { list-style: none; }
+        .themes li { margin-bottom: 8px; padding-left: 15px; border-left: 2px solid var(--border); }
+        
+        .paper { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 6px; padding: 20px; margin-bottom: 15px; }
+        .paper-header { display: flex; gap: 12px; margin-bottom: 12px; flex-wrap: wrap; }
+        .paper-id { font-family: monospace; font-size: 0.85rem; color: var(--accent); background: rgba(88,166,255,0.1); padding: 2px 8px; border-radius: 4px; }
+        .paper-title { font-size: 1.05rem; font-weight: 600; }
+        .paper-abstract { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 12px; }
+        .paper-meta { display: flex; gap: 15px; font-size: 0.85rem; flex-wrap: wrap; }
+        .category { color: var(--text-muted); background: var(--bg); padding: 2px 10px; border-radius: 12px; }
+        
+        .archive { margin-top: 50px; padding-top: 30px; border-top: 1px solid var(--border); }
+        .archive h2 { font-size: 1.4rem; margin-bottom: 15px; }
+        .archive-list { list-style: none; }
+        .archive-list li { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--border); }
+        .archive-list a { color: var(--accent); text-decoration: none; }
+        
+        footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 25px 0; text-align: center; color: var(--text-muted); margin-top: 60px; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>📡 astro-ph Daily Digest</h1>
+            <p class="subtitle">Daily summaries of arXiv astrophysics papers</p>
+            <nav>
+                <a href="/astro-ph-digest/">Latest</a>
+                <a href="/astro-ph-digest/about.html">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>February 15, 2026</h2>
+        <p class="paper-count">Loading today's papers...</p>
+        
+        <div class="themes">
+            <h3>Coming Soon</h3>
+            <p>This page will be updated daily with the latest astro-ph paper summaries.</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Automated daily digest of astro-ph submissions</p>
+        </div>
+    </footer>
+</body>
+</html>
