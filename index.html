@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>astro-ph Daily Digest</title>
+    <title>astro-ph Daily Digest - February 14, 2026</title>
     <style>
         :root {
             --bg: #0d1117;
@@ -14,64 +14,196 @@
             --border: #30363d;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
-        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+        .container { max-width: 850px; margin: 0 auto; padding: 0 20px; }
         
-        header { background: var(--bg-secondary); border-bottom: 1px solid var(--border); padding: 30px 0; margin-bottom: 40px; }
-        header h1 { font-size: 2rem; margin-bottom: 5px; }
-        header .subtitle { color: var(--text-muted); margin-bottom: 15px; }
-        header nav a { color: var(--accent); text-decoration: none; margin-right: 20px; }
+        header { background: var(--bg-secondary); border-bottom: 1px solid var(--border); padding: 25px 0; margin-bottom: 35px; }
+        header h1 { font-size: 1.8rem; margin-bottom: 5px; }
+        header .subtitle { color: var(--text-muted); font-size: 0.95rem; }
         
-        h2 { font-size: 1.6rem; margin-bottom: 15px; }
-        .paper-count { color: var(--text-muted); margin-bottom: 25px; }
+        .date-header { margin-bottom: 25px; }
+        .date-header h2 { font-size: 1.6rem; margin-bottom: 5px; }
+        .date-header .paper-count { color: var(--text-muted); font-size: 0.9rem; }
         
-        .themes { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 6px; padding: 20px; margin-bottom: 30px; }
+        .themes { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 30px; }
         .themes h3 { font-size: 1.1rem; margin-bottom: 12px; color: var(--accent); }
         .themes ul { list-style: none; }
-        .themes li { margin-bottom: 8px; padding-left: 15px; border-left: 2px solid var(--border); }
+        .themes li { margin-bottom: 10px; padding-left: 15px; border-left: 2px solid var(--border); color: var(--text-muted); }
+        .themes li strong { color: var(--text); }
         
-        .paper { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 6px; padding: 20px; margin-bottom: 15px; }
-        .paper-header { display: flex; gap: 12px; margin-bottom: 12px; flex-wrap: wrap; }
-        .paper-id { font-family: monospace; font-size: 0.85rem; color: var(--accent); background: rgba(88,166,255,0.1); padding: 2px 8px; border-radius: 4px; }
-        .paper-title { font-size: 1.05rem; font-weight: 600; }
-        .paper-abstract { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 12px; }
-        .paper-meta { display: flex; gap: 15px; font-size: 0.85rem; flex-wrap: wrap; }
-        .category { color: var(--text-muted); background: var(--bg); padding: 2px 10px; border-radius: 12px; }
+        .paper { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 8px; padding: 22px; margin-bottom: 18px; }
+        .paper-header { display: flex; align-items: baseline; gap: 12px; margin-bottom: 12px; flex-wrap: wrap; }
+        .paper-id { font-family: 'SF Mono', Monaco, monospace; font-size: 0.85rem; color: var(--accent); background: rgba(88,166,255,0.1); padding: 3px 10px; border-radius: 4px; }
+        .paper-title { font-size: 1.05rem; font-weight: 600; line-height: 1.4; }
+        .paper-abstract { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 14px; line-height: 1.75; }
+        .paper-meta { display: flex; gap: 12px; font-size: 0.85rem; flex-wrap: wrap; }
+        .category { color: var(--text-muted); background: var(--bg); padding: 3px 12px; border-radius: 12px; }
         
-        .archive { margin-top: 50px; padding-top: 30px; border-top: 1px solid var(--border); }
-        .archive h2 { font-size: 1.4rem; margin-bottom: 15px; }
-        .archive-list { list-style: none; }
-        .archive-list li { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--border); }
-        .archive-list a { color: var(--accent); text-decoration: none; }
+        .significance-5 { color: #f0883e; }
+        .significance-4 { color: #d29922; }
+        .significance-3 { color: #3fb950; }
         
-        footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 25px 0; text-align: center; color: var(--text-muted); margin-top: 60px; }
+        .section-header { font-size: 1.3rem; margin: 35px 0 20px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+        
+        footer { background: var(--bg-secondary); border-top: 1px solid var(--border); padding: 20px 0; text-align: center; color: var(--text-muted); font-size: 0.85rem; margin-top: 50px; }
+        
+        @media (max-width: 600px) {
+            .paper-header { flex-direction: column; gap: 8px; }
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
             <h1>📡 astro-ph Daily Digest</h1>
-            <p class="subtitle">Daily summaries of arXiv astrophysics papers</p>
-            <nav>
-                <a href="/astro-ph-digest/">Latest</a>
-                <a href="/astro-ph-digest/about.html">About</a>
-            </nav>
+            <p class="subtitle">Automated daily summaries of arXiv astrophysics papers</p>
         </div>
     </header>
 
     <main class="container">
-        <h2>February 15, 2026</h2>
-        <p class="paper-count">Loading today's papers...</p>
+        <div class="date-header">
+            <h2>February 14, 2026</h2>
+            <p class="paper-count">77 papers submitted to astro-ph</p>
+        </div>
         
         <div class="themes">
-            <h3>Coming Soon</h3>
-            <p>This page will be updated daily with the latest astro-ph paper summaries.</p>
+            <h3>Key Themes</h3>
+            <ul>
+                <li><strong>S8 Tension:</strong> Major review finds DES shows 2.4-2.7σ tension while KiDS is consistent (<1σ) - suggests survey systematics, not new physics</li>
+                <li><strong>LIGO O4:</strong> First results from O4a run - improved sub-solar mass limits by >2×, PBH constraints f_PBH < 2%</li>
+                <li><strong>FRB Cosmology:</strong> Joint FRB + weak lensing analysis can reduce S8 degradation by ~80%</li>
+                <li><strong>Exoplanets:</strong> Water worlds explain the "radius cliff" as a "waterfall" - formation pathway via migration from water-rich embryos</li>
+                <li><strong>ISM Model:</strong> NE2025 updates NE2001 - 20× improvement in pulsar distance predictions</li>
+            </ul>
         </div>
+
+        <h3 class="section-header">Featured Papers</h3>
+
+        <article class="paper">
+            <div class="paper-header">
+                <span class="paper-id">2602.12238</span>
+                <span class="paper-title">Status of the S8 Tension: A 2026 Review of Probe Discrepancies</span>
+            </div>
+            <p class="paper-abstract"><strong>Abstract:</strong> The parameter S8 ≡ σ8 (Ωm/0.3)^0.5 quantifies the amplitude of matter density fluctuations. A persistent discrepancy exists between early-universe CMB observations and late-universe probes. This review assesses the "S8 tension" against a new 2026 baseline using a unified "Combined CMB" framework incorporating Planck, ACT DR6, and SPT-3G, yielding S8 = 0.836^+0.012_-0.013. Compiling measurements from 2019-2026, DES Year 6 exhibits 2.4σ-2.7σ tension while KiDS Legacy shows <1σ consistency. The heterogeneous landscape suggests survey-specific systematic effects contribute substantially, though new physics beyond ΛCDM cannot be excluded.</p>
+            <div class="paper-meta">
+                <span class="category">Cosmology</span>
+                <span class="significance-5">⭐⭐ Essential reading</span>
+            </div>
+        </article>
+
+        <article class="paper">
+            <div class="paper-header">
+                <span class="paper-id">2602.12115</span>
+                <span class="paper-title">Search for Sub-Solar Mass Binaries in LIGO O4a</span>
+            </div>
+            <p class="paper-abstract"><strong>Abstract:</strong> We report the first results of a sub-solar mass compact binary search using O4a data. Sub-solar mass neutron stars or primordial black holes are not expected via standard stellar evolution. Our search covers binaries with primary masses 0.1-2 M☉ and secondary masses 0.1-1 M☉, incorporating tidal effects up to 7×10^5. No significant candidates found. We improve sub-solar mass BH merger rate limits by >2× over O1-O3b. We place 90% confidence upper limit on merger rate R90 < 1.77×10^4 Gpc^-3 yr^-1 for chirp mass 0.2 M☉, and constrain PBH fraction f_PBH < 2% for chirp mass 0.1 M☉.</p>
+            <div class="paper-meta">
+                <span class="category">Gravitational Waves</span>
+                <span class="significance-5">⚡ LIGO O4 first results</span>
+            </div>
+        </article>
+
+        <article class="paper">
+            <div class="paper-header">
+                <span class="paper-id">2602.12174</span>
+                <span class="paper-title">Probing baryonic feedback with fast radio bursts + cosmic shear</span>
+            </div>
+            <p class="paper-abstract"><strong>Abstract:</strong> Cosmological inference from weak lensing is increasingly limited by uncertainties in baryonic physics, which suppress the non-linear matter power spectrum on small scales. We forecast constraining power of joint WL + FRB analysis. We find that a 3×2-point analysis significantly improves cosmological constraints, <strong>reducing the degradation factor on S8 by ~80%</strong> compared to WL alone. FRBs alone are sensitive only to a degenerate combination of baryonic parameters, which WL breaks the degeneracy on.</p>
+            <div class="paper-meta">
+                <span class="category">Cosmology</span>
+                <span class="significance-4">💡 New methodology</span>
+            </div>
+        </article>
+
+        <article class="paper">
+            <div class="paper-header">
+                <span class="paper-id">2602.11923</span>
+                <span class="paper-title">The Radius Cliff is a Waterfall: Explaining Sub-Neptunes with Steam Worlds</span>
+            </div>
+            <p class="paper-abstract"><strong>Abstract:</strong> The demographics of Kepler planets provide a key testbed for planet formation models, particularly for explaining the radius valley separating super-Earths and sub-Neptunes. Updated interior structure models of water worlds with adiabatic steam atmospheres reproduce the observed valley near ~2 R⊕ more accurately. Migration models suggest these formation pathways account for the period distributions and hot Neptune desert. The inferred water mass fraction of water worlds peaks at ~41%. The "radius cliff" emerges as a "waterfall" in occurrence rates - water-rich planets migrate inward and lose their steam atmospheres to become rocky super-Earths.</p>
+            <div class="paper-meta">
+                <span class="category">Exoplanets</span>
+                <span class="significance-5">🌍 Major breakthrough</span>
+            </div>
+        </article>
+
+        <article class="paper">
+            <div class="paper-header">
+                <span class="paper-id">2602.11838</span>
+                <span class="paper-title">NE2025: An Updated Electron Density Model for the Galactic ISM</span>
+            </div>
+            <p class="paper-abstract"><strong>Abstract:</strong> Free electrons in the Galactic ISM disperse and scatter coherent radio waves. We use 171 precise pulsar distances (parallaxes and globular cluster associations) and 568 scattering measurements to update the NE2001 model. We refit the thick/thin disks and three spiral arms. The new parameters significantly repartition free electrons between thick disk and spiral arms, correcting NE2001's systematic underestimation of pulsar distances. The model yields <strong>20× improvement in distance accuracy</strong> and 100% improvement in scattering predictions. Critical for interpreting pulsars, FRBs, and Galactic radio observations.</p>
+            <div class="paper-meta">
+                <span class="category">Instrumentation</span>
+                <span class="significance-5">📡 Essential reference</span>
+            </div>
+        </article>
+
+        <article class="paper">
+            <div class="paper-header">
+                <span class="paper-id">2602.11936</span>
+                <span class="paper-title">Probing Dynamical Dark Energy with Late-Time Data</span>
+            </div>
+            <p class="paper-abstract"><strong>Abstract:</strong> We examine dynamical dark energy (CPL parametrization) constraints from late-time data. CPL inferences are strongly dataset-dependent: CMB+DESI BAO pulls toward nearly coasting universe (q0≈0), while CMB+SN+BAOtr yields conventional acceleration. The parameter w(z→∞) = w0 + wa < -1 in all cases. Bayesian evidence is dataset-dependent. This dataset-dependence motivates scrutiny of BAO systematics and highlights that apparent support for dynamical dark energy may be driven by low-z data choices rather than physics.</p>
+            <div class="paper-meta">
+                <span class="category">Cosmology</span>
+                <span class="significance-4">🔄 Important caveats</span>
+            </div>
+        </article>
+
+        <article class="paper">
+            <div class="paper-header">
+                <span class="paper-id">2602.11765</span>
+                <span class="paper-title">LISA Galactic compact binary gravitational wave foreground</span>
+            </div>
+            <p class="paper-abstract"><strong>Abstract:</strong> We predict LISA will detect the GW background from Galactic binaries after 3 months. Over 2000 binaries will be individually detectable in a 4-year mission. The common envelope efficiency α influences both the power spectrum shape and the relative number of detectable WD vs NS systems. This is essential for characterizing the LISA foreground and understanding the Galactic binary population - the dominant noise source for LISA gravitational wave detection.</p>
+            <div class="paper-meta">
+                <span class="category">Gravitational Waves</span>
+                <span class="significance-4">🎵 LISA forecasts</span>
+            </div>
+        </article>
+
+        <article class="paper">
+            <div class="paper-header">
+                <span class="paper-id">2602.12282</span>
+                <span class="paper-title">Broad absorptions in optical spectra of low-mass X-ray binaries</span>
+            </div>
+            <p class="paper-abstract"><strong>Abstract:</strong> We present the first population study of broad absorptions (BAs) in optical spectra of low-mass X-ray binaries. These features are ubiquitous in black hole systems (>50%), predominantly occurring in the hydrogen Balmer series across all X-ray states. We favor a scenario where BAs arise from a stable, optically thick layer of the accretion disk below the chromospheric emission region - a previously overlooked spectral feature providing new insights into accretion physics.</p>
+            <div class="paper-meta">
+                <span class="category">High Energy Astrophysics</span>
+                <span class="significance-3">🔬 First population study</span>
+            </div>
+        </article>
+
+        <article class="paper">
+            <div class="paper-header">
+                <span class="paper-id">2602.12272</span>
+                <span class="paper-title">The Wandering Supermassive Black Hole Powering off-nuclear TDE AT2024tvd</span>
+            </div>
+            <p class="paper-abstract"><strong>Abstract:</strong> We analyze the late-time plateau phase of off-nuclear TDE AT2024tvd using a fully relativistic accretion disk model, inferring log10(M•/M☉) ≈ 6.0 ± 0.2. No detected star cluster or dwarf galaxy associated, down to log10(Mgal/M☉) ≤ 7.6. This represents an extreme case of BH-to-host mass ratio (>3%), consistent with a heavily tidally stripped nucleus - demonstrating wandering SMBHs can power off-nuclear TDEs without detectable host stellar overdensities.</p>
+            <div class="paper-meta">
+                <span class="category">High Energy Astrophysics</span>
+                <span class="significance-4">⭐ Rare discovery</span>
+            </div>
+        </article>
+
+        <article class="paper">
+            <div class="paper-header">
+                <span class="paper-id">2602.12201</span>
+                <span class="paper-title">Oxygen retention in sub-Neptunes: BOREAS atmospheric escape model</span>
+            </div>
+            <p class="paper-abstract"><strong>Abstract:</strong> We develop BOREAS, a self-consistent mass loss model coupling 1D Parker wind with mass-dependent fractionation. We find oxygen is efficiently retained over most parameter space. Sub-Neptunes undergo substantial atmospheric enrichment over ~200 Myr when hydrogen escape is efficient. Water-rich planets like GJ 9827 d could have originated from water-poor envelopes - explaining the diversity of sub-Neptune compositions.</p>
+            <div class="paper-meta">
+                <span class="category">Exoplanets</span>
+                <span class="significance-3">💡 New model</span>
+            </div>
+        </article>
+
     </main>
 
     <footer>
         <div class="container">
-            <p>Automated daily digest of astro-ph submissions</p>
+            <p>77 papers • Automated daily digest • Data from arXiv.org • Built with OpenClaw</p>
         </div>
     </footer>
 </body>
