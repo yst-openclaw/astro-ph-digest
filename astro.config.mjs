@@ -6,5 +6,7 @@ export default defineConfig({
   integrations: [],
   build: {
     format: 'file'
-  }
+  },
+  base: '/astro-ph-digest/',
+  site: 'https://yst-openclaw.github.io'
 });
