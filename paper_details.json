@@ -1,0 +1,30 @@
+[
+  {
+    "id": "2602.12238",
+    "title": "Status of the $S_8$ Tension: A 2026 Review of Probe Discrepancies",
+    "abstract": "The parameter $S_8 \\equiv \\sigma_8 (\\Omega_m/0.3)^{0.5}$ quantifies the amplitude of matter density fluctuations. A persistent discrepancy exists between early-universe CMB observations and late-universe probes. This review assesses the ``$S_8$ tension&#39;&#39; against a new 2026 baseline: a unified ``Combined CMB&#39;&#39; framework incorporating Planck, ACT DR6, and SPT-3G. This combined analysis yields $S_8 = 0.836^{+0.012}_{-0.013}$, providing a higher central value and reduced uncertainties compared to Planck alone. Compiling measurements from 2019--2026, we reveal a striking bifurcation: DES Year 6 results exhibit a statistically significant tension of $2.4\\sigma$--$2.7\\sigma$ \\citep{DESY6}, whereas KiDS Legacy results demonstrate statistical consistency at $&lt;1\\sigma$ \\citep{Wright2025}. We examine systematic origins of this dichotomy, including photometric redshift calibration, intrinsic alignment modeling, and shear measurement pipelines. We further contextualize these find",
+    "comment": "",
+    "figures": []
+  },
+  {
+    "id": "2602.12115",
+    "title": "Search for Sub-Solar Mass Binaries in the First Part of LIGO&#39;s Fourth Observing Run",
+    "abstract": "We report the first results of a sub-solar mass compact binary search using the data from the first part of the fourth observing run (O4a) of the Advanced LIGO detectors. Sub-solar mass neutron stars or primordial black holes are not expected to form via standard stellar evolution, and their observation would signify a new class of astrophysical object or the discovery of dark matter. Our search covers binaries with primary masses 0.1 to 2 $\\textrm{M}_\\odot$ and secondary masses 0.1 to 1 $\\textrm{M}_\\odot$. We explicitly incorporate tidal effects up to $7\\times10^5$ for extremely low mass neutron stars. No statistically significant candidates are identified. The advanced sensitivity of the O4a run enables an improvement in the sub-solar mass black hole merger rate limits by more than $2 \\times$ over the previous three observing runs (O1-O3b). We place a $90\\%$ confidence upper limit on the merger rate $\\mathcal{R}_{90}$ for sub-solar mass black holes to be $&lt; 1.77\\times10^4 \\textrm{",
+    "comment": "",
+    "figures": []
+  },
+  {
+    "id": "2602.12174",
+    "title": "Probing baryonic feedback with fast radio bursts: joint analyses with cosmic shear and galaxy clustering",
+    "abstract": "Cosmological inference from weak lensing (WL) surveys is increasingly limited by uncertainties in baryonic physics, which suppress the non-linear matter power spectrum on small scales. Multi-probe analyses that incorporate complementary tracers of the gas distribution around haloes offer a pathway to calibrate these effects and recover unbiased cosmological information. In this work, we forecast the constraining power of a joint analysis combining fiducial data from a Stage-IV WL survey with measurements of the dispersion measure from fast radio bursts (FRBs). We evaluate the ability of this approach to simultaneously constrain cosmological parameters and the astrophysical processes governing baryonic feedback, and we quantify the impact of key FRB systematics, including redshift uncertainties and source clustering. We find that, even after accounting for these effects, a 3$\\times$2-point analysis of WL and FRBs significantly improves cosmological constraints, reducing the degradation ",
+    "comment": "",
+    "figures": []
+  },
+  {
+    "id": "2602.11923",
+    "title": "The Radius Cliff is a Waterfall: Explaining Sub-Neptune Exoplanets with Steam Worlds",
+    "abstract": "The demographics of Kepler planets provide a key testbed for models of planet formation and evolution, particularly for explaining the radius valley separating super-Earths and sub-Neptunes. A primordial interpretation based on differences in bulk densities -- where rocky and water-rich planets form via migration pathways -- offers an alternative to atmospheric loss scenarios. Updated interior structure models of water worlds with adiabatic steam atmospheres reproduce the observed valley near $\\sim2~R_\\oplus$ more accurately. Furthermore, migration models from our Genesis library suggest that these formation pathways can also account for the distinct period distributions of super-Earths and sub-Neptunes, as well as the emergence of the hot Neptune desert. Motivated by this, we develop a Bayesian hierarchical mixture model for close-in Kepler planets ($P&lt;100$ days), combining rocky planets and water worlds without H/He envelopes. The inferred mass distributions of rocky and water-ric",
+    "comment": "",
+    "figures": []
+  }
+]
